@@ -70,7 +70,7 @@ function configurarBusca(idInput, idLista) {
 }
 
 function obterDiaSemanaAtual() {
-    const dias = ['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+    const dias = ['domingo','segunda','terca','quarta','quinta','sexta','sabado'];
     return dias[new Date().getDay()];
 }
 
