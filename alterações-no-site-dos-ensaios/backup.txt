@@ -1,0 +1,21 @@
+Antiga formatação do da Lista e seus blocos, deixando tudo menor e quebrando linha, o atual é dinamico.
+Após subir em prod, verificar qual é mais confortavel no celular (ja que lá são os maiores usos)
+
+
+ul { 
+    list-style: none; 
+    padding: 0;
+
+  
+    
+}
+
+li { 
+    background-color: #dee2e6; 
+    padding: 15px; 
+    margin: 8px auto; 
+    max-width: 400px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}

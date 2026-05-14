@@ -1,0 +1,251 @@
+/* ================================================= */
+/* ARQUIVO CSS FINAL (COM CORREÇÃO PARA CELULAR REAL)*/
+/* ================================================= */
+
+/* ====== GERAL E CORREÇÃO DE ROLAGEM ====== */
+html {
+    /* Manda o navegador calcular o tamanho das caixas de uma forma mais inteligente.
+       Isso impede que 'padding' (espaço interno) e 'border' (borda) criem espaço extra
+       e causem aquela rolagem desnecessária que tínhamos. */
+    box-sizing: border-box;
+
+    /* Garante que a página base possa ter 100% de altura. */
+    height: 100%;
+}
+
+/* O asterisco (*) seleciona TODOS os elementos da página.
+   Esta regra faz com que todos eles sigam a mesma forma inteligente de calcular o tamanho. */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ====== BODY ====== */
+body {
+    /* Ativa o modo "Flexbox", que transforma o body em um organizador inteligente de layout. */
+    display: flex;
+
+    /* Diz ao organizador para empilhar os itens (header, section, footer) em uma coluna vertical. */
+    flex-direction: column;
+    
+    /* AQUI ESTÁ A CORREÇÃO DEFINITIVA PARA CELULAR REAL */
+    /* Garante que a página tenha no mínimo a altura REAL da tela. 'dvh' (Dynamic Viewport Height)
+       é uma unidade moderna que se ajusta às barras do navegador (endereço, etc.) que aparecem e somem no celular. */
+    min-height: 100dvh;
+    
+    margin: 0;                      /* Remove a margem padrão que todo navegador coloca. */
+    font-family: Verdana;           /* Define a fonte padrão para toda a página. */
+    text-align: center;             /* Centraliza todo o texto. */
+    background-color: #ffffff;      /* Cor de fundo da página. */
+
+    /* Centraliza os blocos (header, section) na horizontal, um embaixo do outro. */
+    align-items: center;
+
+    /* Seu espaçamento original de 5px no topo da página. */
+    padding-top: 2px;
+}
+
+/* ====== HEADER (CABEÇALHO) ====== */
+header {
+    background-color: #dee2e6;      /* Cor de fundo do cabeçalho. */
+    width: 95%;                     /* Largura do cabeçalho. */
+    max-width: 735px;               /* Largura máxima em telas grandes, para não ficar gigante. */
+    padding: 10px;                  /* Espaçamento interno do cabeçalho. */
+    border-radius: 15px;            /* Deixa os cantos da caixa arredondados. */
+    border: 1px solid #5a5a5a3d;    /* Estilo da borda. */
+    text-align: center;             /* Garante que o texto dentro do header fique centralizado. */
+    margin-bottom: 5px;             /* Distância fixa entre o header e a section (para PC). */
+}
+
+/* ====== FRASE ABAIXO DA PESQUISA (CABEÇALHO) ====== */
+.obs {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* ====== FOOTER (RODAPÉ) ====== */
+footer {
+    /* ESTA É A REGRA MÁGICA: Empurra o rodapé para a base da tela se houver espaço sobrando.
+       Ela funciona tanto no PC quanto no celular (graças ao 'dvh' no body). */
+    margin-top: auto;
+    
+    width: 100%;                    /* Faz o rodapé ocupar toda a largura da tela. */
+    background-color: #ececec;      /* Cor de fundo do rodapé. */
+    color: #555;                    /* Cor do texto do rodapé. */
+    text-align: center;             /* Centraliza o texto do rodapé. */
+    padding: 3px;                   /* Seu espaçamento interno original. */
+    font-size: 11px;                /* Tamanho do texto do rodapé. */
+    border-top: 1px solid #ccc;     /* Cria uma linha fina no topo do rodapé. */
+}
+
+
+/* ====== TÍTULOS, LOGO, INPUTS, ETC. ====== */
+h1 { 
+    margin-top: 0;                  /* Remove um espaço extra que o título poderia ter no topo. */
+    margin-bottom: 20px;            /* Espaço entre o título e a logo. */
+    color: #033d60;                 /* Cor do texto do título. */
+    font-size: 1.8em;               /* Tamanho do título. */
+}
+
+.logo-fundo { 
+    display: block;                 /* Faz a logo se comportar como um bloco para poder centralizar. */
+    margin: 0 auto 25px auto;       /* Centraliza horizontalmente e adiciona espaço embaixo. */
+    width: 180px;                   /* Tamanho da logo. */
+}
+
+/* ================================================================= */
+
+button { 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    border: 1px solid #033d60;
+    border-radius: 5px;
+    padding: 10px;
+    background: #033d60;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    /* Adiciona uma transição suave para o efeito 'hover' e 'ativo' */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+    background-color: transparent
+}
+
+input { 
+    width: 80%; 
+    padding: 8px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 1. Estilizando a LISTA (o <ul>) */
+ul { 
+    list-style: none; 
+    padding: 0;
+    margin: 0; /* Adicionado para garantir o reset */
+
+    /* --- CONFIGURAÇÃO DO GRID --- */
+    
+    /* 1. Ativa o CSS Grid */
+    display: grid;
+    
+    /* 2. A coluna ÚNICA terá a largura do item mais largo */
+    grid-template-columns: max-content;
+
+    /* 3. Centraliza o bloco da lista (a coluna) na página */
+    justify-content: center; 
+}
+
+/* 2. Estilizando CADA ITEM (o <li>) */
+li { 
+    background-color: #dee2e6; 
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    
+    /* --- AJUSTES FINAIS --- */
+
+    /* 1. Adicione a margem APENAS na vertical (para cima/baixo) */
+    margin: 8px 0; 
+    
+    /* 2. Força o texto a ficar em UMA ÚNICA LINHA */
+    white-space: nowrap; 
+}
+
+/* A CLASSE MAIS IMPORTANTE! */
+/* Qualquer elemento com a classe "hidden" vai sumir da tela. */
+.hidden {
+    display: none;
+}
+
+
+/* ======================================================== */
+/* ====== REGRAS ESPECIAIS PARA TELAS PEQUENAS (CELULAR) ====== */
+/* ======================================================== */
+
+/* A regra abaixo só será aplicada em telas com largura máxima de 768px (celulares e tablets pequenos). */
+@media (max-width: 768px) {
+    
+    header {
+        margin-bottom: 25px; /* Reduz a distância entre header e section no celular. */
+    }
+
+    button {
+        font-size: 14px;
+        margin: 4px;
+    }
+
+
+    /* ======================================= */
+    /* ====== CORREÇÃO DA LISTA NO CELULAR ====== */
+    /* ======================================= */
+
+    /* 1. Define que a lista (<ul>) deve ter 95% de largura e a RE-CENTRALIZA na tela. */
+    ul {
+        width: 95%;
+        
+        /* ADIÇÃO PARA CENTRALIZAR O BLOCO DA LISTA */
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* Altera a regra da coluna para ocupar 100% da nova largura */
+        grid-template-columns: 100%;
+    }
+    
+    /* 2. (A REGRA MAIS IMPORTANTE)
+          Permite que o texto dentro dos itens (<li>) quebre a linha. */
+    li {
+        white-space: normal;
+    }
+}
+
+/* ================================================= */
+/* ====== ESTILO DOS BOTÕES DE CIDADE ====== */
+/* ================================================= */
+
+/* 1. A CAIXA (O Container) */
+/* Aqui mexemos apenas na posição. NÃO coloque cor de fundo aqui. */
+.selecao-cidade {
+    display: flex;              /* Deixa um botão ao lado do outro */
+    justify-content: center;    /* Centraliza eles */
+    gap: 10px;                  /* Espaço entre os botões */
+    
+    /* Linha opcional separando do resto */
+    border-bottom: 1px solid #5a5a5a3d; 
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* 2. OS BOTÕES (O que você quer mudar) */
+/* O segredo é o seletor: ".selecao-cidade button" */
+/* Isso significa: "Todo botão que estiver DENTRO de .selecao-cidade" */
+.selecao-cidade button {
+    /* Exemplo de cor DIFERENTE dos outros botões do site */
+    background-color: #033d60;;    /* Fundo branco */
+    color: white;             /* Letra azul */
+    border: 2px solid #033d60;  /* Borda azul */
+    border-radius: 20px;        /* Borda bem redonda (estilo pílula) */
+    padding: 8px 20px;          /* Tamanho interno */
+    font-weight: bold;          /* Letra mais grossa */
+    
+    /* Garante que as margens não atrapalhem */
+    margin: 0; 
+}
+
+/* 3. EFEITO AO PASSAR O MOUSE (Hover) NESSES BOTÕES ESPECÍFICOS */
+.selecao-cidade button:hover {
+    background-color: transparent;  /* Um cinza bem clarinho ao passar o mouse */
+    color: rgb(255, 255, 255);             /* Mantém a letra azul */
+}
+
+/* 4. O BOTÃO SELECIONADO (Ativo) */
+/* Quando clicarmos via Javascript, vamos adicionar a classe .ativo */
+.selecao-cidade button.ativo {
+    background-color: rgba(255, 255, 255, 0.652);  /* Fica todo azul */
+    color: #033d60;               /* Letra branca */
+}

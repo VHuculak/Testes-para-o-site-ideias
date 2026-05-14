@@ -1,0 +1,283 @@
+/* ================================================= */
+/* ARQUIVO CSS FINAL (COM CORREÇÃO PARA CELULAR REAL)*/
+/* ================================================= */
+
+/* ====== GERAL E CORREÇÃO DE ROLAGEM ====== */
+html {
+    /* Manda o navegador calcular o tamanho das caixas de uma forma mais inteligente.
+       Isso impede que 'padding' (espaço interno) e 'border' (borda) criem espaço extra
+       e causem aquela rolagem desnecessária que tínhamos. */
+    box-sizing: border-box;
+
+    /* Garante que a página base possa ter 100% de altura. */
+    height: 100%;
+}
+
+/* O asterisco (*) seleciona TODOS os elementos da página.
+   Esta regra faz com que todos eles sigam a mesma forma inteligente de calcular o tamanho. */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ====== BODY ====== */
+body {
+    /* Ativa o modo "Flexbox", que transforma o body em um organizador inteligente de layout. */
+    display: flex;
+
+    /* Diz ao organizador para empilhar os itens (header, section, footer) em uma coluna vertical. */
+    flex-direction: column;
+    
+    /* AQUI ESTÁ A CORREÇÃO DEFINITIVA PARA CELULAR REAL */
+    /* Garante que a página tenha no mínimo a altura REAL da tela. 'dvh' (Dynamic Viewport Height)
+       é uma unidade moderna que se ajusta às barras do navegador (endereço, etc.) que aparecem e somem no celular. */
+    min-height: 100dvh;
+    
+    margin: 0;                      /* Remove a margem padrão que todo navegador coloca. */
+    font-family: Verdana;           /* 🔧 Define a fonte padrão para toda a página. */
+    text-align: center;             /* Centraliza todo o texto. */
+    background-color: #ffffff;      /* 🔧 Cor de fundo da página. */
+
+    /* Centraliza os blocos (header, section) na horizontal, um embaixo do outro. */
+    align-items: center;
+
+    /* 🔧 Seu espaçamento original de 5px no topo da página. */
+    padding-top: 2px;
+}
+
+/* ====== HEADER (CABEÇALHO) ====== */
+header {
+    background-color: #dee2e6;      /* 🔧 Cor de fundo do cabeçalho. */
+    width: 95%;                     /* 🔧 Largura do cabeçalho. */
+    max-width: 735px;               /* 🔧 Largura máxima em telas grandes, para não ficar gigante. */
+    padding: 10px;                  /* 🔧 Espaçamento interno do cabeçalho. */
+    border-radius: 15px;            /* 🔧 Deixa os cantos da caixa arredondados. */
+    border: 1px solid #5a5a5a3d;    /* 🔧 Estilo da borda. */
+    text-align: center;             /* Garante que o texto dentro do header fique centralizado. */
+    margin-bottom: 5px;            /* 🔧 Distância fixa entre o header e a section (para PC). */
+}
+
+
+
+/* ====== FOOTER (RODAPÉ) ====== */
+footer {
+    /* ESTA É A REGRA MÁGICA: Empurra o rodapé para a base da tela se houver espaço sobrando.
+       Ela funciona tanto no PC quanto no celular (graças ao 'dvh' no body). */
+    margin-top: auto;
+    
+    width: 100%;                    /* Faz o rodapé ocupar toda a largura da tela. */
+    background-color: #ececec;      /* 🔧 Cor de fundo do rodapé. */
+    color: #555;                    /* 🔧 Cor do texto do rodapé. */
+    text-align: center;             /* Centraliza o texto do rodapé. */
+    padding: 3px;                   /* 🔧 Seu espaçamento interno original. */
+    font-size: 11px;                /* 🔧 Tamanho do texto do rodapé. */
+    border-top: 1px solid #ccc;     /* Cria uma linha fina no topo do rodapé. */
+}
+
+
+/* ====== TÍTULOS, LOGO, INPUTS, ETC. ====== */
+h1 { 
+    margin-top: 0;                  /* Remove um espaço extra que o título poderia ter no topo. */
+    margin-bottom: 20px;            /* 🔧 Espaço entre o título e a logo. */
+    color: #033d60;                 /* 🔧 Cor do texto do título. */
+    font-size: 1.8em;               /* 🔧 Tamanho do título. */
+}
+
+.logo-fundo { 
+    display: block;                 /* Faz a logo se comportar como um bloco para poder centralizar. */
+    margin: 0 auto 25px auto;       /* Centraliza horizontalmente e adiciona espaço embaixo. */
+    width: 180px;                   /* 🔧 Tamanho da logo. */
+}
+
+
+
+/* =================================================================  */
+
+button { 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    cursor: pointer; 
+    border: 1px solid #033d60;
+    border-radius: 5px;
+    padding: 10px;
+    background: #033d60;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+button:hover {
+    background-color: transparent
+}
+
+
+
+input { 
+    width: 80%; 
+    padding: 8px; 
+    margin-bottom: 20px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 1. Estilizando a LISTA (o <ul>) */
+ul { 
+  list-style: none; 
+  padding: 0;
+  margin: 0; /* Adicionado para garantir o reset */
+
+  /* --- CONFIGURAÇÃO DO GRID --- */
+  
+  /* 1. Ativa o CSS Grid */
+  display: grid;
+  
+  /* 2. A coluna ÚNICA terá a largura do item mais largo */
+  grid-template-columns: max-content;
+
+  /* 3. Centraliza o bloco da lista (a coluna) na página */
+  justify-content: center; 
+}
+
+/* 2. Estilizando CADA ITEM (o <li>) */
+li { 
+  background-color: #dee2e6; 
+  padding: 15px; 
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  
+  /* --- AJUSTES FINAIS --- */
+
+  /* 1. Adicione a margem APENAS na vertical (para cima/baixo) 
+     Removemos o 'auto' para o Grid poder controlar o alinhamento */
+  margin: 8px 0; 
+  /* (Isso é o mesmo que margin-top: 8px; margin-bottom: 8px;) */
+  
+  /* 2. Força o texto a ficar em UMA ÚNICA LINHA 
+     para o 'max-content' funcionar corretamente */
+  white-space: nowrap; 
+
+  /* 3. (IMPORTANTE) REMOVA AS LINHAS:
+     max-width: 400px;
+     margin: 8px auto; 
+  */
+}
+
+/* A CLASSE MAIS IMPORTANTE! */
+/* Qualquer elemento com a classe "hidden" vai sumir da tela. */
+.hidden {
+    display: none;
+}
+
+
+#legenda_musica {
+    text-align: center;
+    margin-top: 15px;
+    justify-content: center;
+    
+}
+
+
+#legenda_musica p {
+  /* 1. Remove margens padrão desnecessárias */
+  margin-top: 0;
+  margin-bottom: 5px; 
+  
+  /* 2. Cria o Recuo Pendurado */
+  
+  /* Adiciona um padding esquerdo para empurrar TODO o conteúdo (incluindo a bolinha) */
+  padding-left: 15px; /* Ajuste este valor: é o espaço da bolinha + recuo do texto */
+  
+  /* Puxa a primeira linha (onde está a bolinha) para o espaço criado pelo padding.
+     O valor deve ser negativo e IGUAL ao valor do padding-left. */
+  text-indent: -15px; 
+  
+  /* Garante que o texto se alinhe bem à esquerda (pode não ser necessário, mas ajuda) */
+  text-align: left;
+  padding: 12px;
+}
+
+
+
+
+
+
+
+
+
+/* ======================================================== */
+/* ====== REGRAS ESPECIAIS PARA TELAS PEQUENAS (CELULAR) ====== */
+/* ======================================================== */
+
+/* A regra abaixo só será aplicada em telas com largura máxima de 768px (celulares e tablets pequenos).
+   No PC, tudo que está aqui dentro é completamente ignorado. */
+@media (max-width: 768px) {
+    
+    /* O objetivo aqui é reduzir os espaços fixos para que a soma da altura de tudo
+       caiba na tela do celular e o rodapé dinâmico funcione sem criar rolagem. */
+
+    header {
+        margin-bottom: 25px;        /* 🔧 Reduz a distância entre header e section no celular. */
+    }
+
+    section {
+        margin-bottom: 25px;        /* 🔧 Reduz a distância de segurança abaixo da section no celular. */
+    }
+    button {
+        font-size: 13px;
+        margin: 4px;
+    }
+
+    #botoes button{
+        font-size: 13px;
+        margin: 4px;
+        
+    }
+
+    #legenda_musica {
+        text-align: auto;
+
+    }
+
+
+    /* ======================================= */
+    /* ====== CORREÇÃO DA LISTA NO CELULAR ====== */
+    /* ======================================= */
+
+    /* 1. Define que a lista (<ul>) deve ter 95% de largura
+          e a RE-CENTRALIZA na tela. */
+    ul {
+        width: 95%;
+        
+        /* ADIÇÃO PARA CENTRALIZAR O BLOCO DA LISTA */
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* Altera a regra da coluna para ocupar 100% da nova largura */
+        grid-template-columns: 100%;
+    }
+    
+    /* 2. (A REGRA MAIS IMPORTANTE)
+          Permite que o texto dentro dos itens (<li>) quebre a linha. */
+    li {
+        white-space: normal;
+    }
+
+}
+
+#legenda_musica p {
+  /* 1. Remove margens padrão desnecessárias */
+  margin-top: 0;
+  margin-bottom: 5px; 
+  
+  /* 2. Cria o Recuo Pendurado */
+  
+  /* Puxa a primeira linha (onde está a bolinha) para o espaço criado pelo padding.
+     O valor deve ser negativo e IGUAL ao valor do padding-left. */
+  text-indent: -9px; 
+  
+
+  /* Garante que o texto se alinhe bem à esquerda (pode não ser necessário, mas ajuda) */
+  text-align: left;
+  padding: 12px;
+}

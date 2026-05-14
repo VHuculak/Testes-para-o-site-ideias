@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório CCB - Maringá e Região</title>
+    <link rel="stylesheet" href="estilo.css"> 
+</head>
+<body>
+    <header>
+        <h1><span id="titulo-regiao">Relatório CCB - Maringá e Região</span></h1>
+        <img class="logo-fundo" src="logo_oficial_CCB.png" alt="Logo">
+
+        <div class="selecao-cidade">
+            <button id="btn-maringa" class="ativo" onclick="selecionarMaringa()">Maringá</button>
+            <button id="btn-campomourao" onclick="selecionarCampoMourao()">Campo Mourão</button>
+        </div>
+        <button onclick="mostrarCultos()">Cultos</button>
+        <button onclick="mostrarEnsaios()">Ensaios</button>
+        <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button>
+        <button onclick="mostrarServiços()">Serviços</button>
+    </header>
+
+    <main>
+        <div id="pagina-cultos-mga" class="conteudo">
+            <h2>Agenda de Cultos</h2>
+            <input id="busca-cultos-mga" placeholder="Digite o dia ou local...">
+            <ul id="lista-cultos-mga">
+                <li>Vila Santo Antônio - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Vitória - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Verônica - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Alvorada III - Ebenezer - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque Residencial Aeroporto - 3ª Parte - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Parque das Laranjeiras - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                <li>Jardim Piatã - Terça e Sábado - 19:30 | Domingo - 18:30</li>
+                </ul>
+        </div>
+
+        <div id="pagina-ensaios-mga" class="conteudo hidden">
+            <h2>Agenda de Ensaios</h2>
+            <input id="busca-ensaio-mga" placeholder="Digite o dia ou local...">
+            <ul id="lista-ensaios-mga">
+                <li>1ª Sexta - Jd. Liberdade</li>
+                <li>1ª Sexta - Marialva - Central</li>
+                <li>1ª Sexta - Jd. Nova Aliança (SDI)</li>
+                </ul>
+        </div>
+
+        <div id="pagina-serviços-mga" class="conteudo hidden">
+            <h2>Lista de Serviços</h2>
+            <input id="busca-serviços-mga" placeholder="Digite o serviço ou data...">
+            <ul id="lista-serviços-mga">
+                <h3>Batismo</h3>
+                <li>Batismo - Mandaguaçu - 09/11/25 no Domingo às 18:30h - Ancião José Reis</li>
+                <li>Batismo - Floresta - 15/11/25 no Domingo às 19:00h - Ancião João Marinho</li>
+                </ul>
+        </div>
+
+        <div id="pagina-cultos-cm" class="conteudo hidden">
+            <h2>Agenda de Cultos</h2>
+            <input id="busca-cultos-cm" placeholder="Digite o dia ou local...">
+            <ul id="lista-cultos-cm">
+                <li>Campo Mourão - Central - Quarta e Sábado - 20:00</li>
+                <li>Campo Mourão - Jd. Piquiri - Terça - 20:00</li>
+            </ul>
+        </div>
+
+        <div id="pagina-ensaios-cm" class="conteudo hidden">
+            <h2>Agenda de Ensaios</h2>
+            <input id="busca-ensaio-cm" placeholder="Digite o dia ou local...">
+            <ul id="lista-ensaios-cm">
+                <li>Campo Mourão - 1ª Sexta - Ensaio Local</li>
+            </ul>
+        </div>
+
+        <div id="pagina-serviços-cm" class="conteudo hidden">
+            <h2>Lista de Serviços</h2>
+            <input id="busca-serviços-cm" placeholder="Digite o serviço ou data...">
+            <ul id="lista-serviços-cm">
+                <h3>Batismo</h3>
+                <li>Batismo - Campo Mourão - 10/11/25...</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Nota: Este não é um site oficial da Congregação Cristã no Brasil.</p>
+        <p>© 2025 - Feito por Vitor Huçulak</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
