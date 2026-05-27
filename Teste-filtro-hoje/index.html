@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Relatório CCB - Maringá e Região</title>
-      <link rel="stylesheet" href="estilo.css"> <!-- cria um link para outro arquivo
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório CCB - Maringá e Região</title>
+    <link rel="stylesheet" href="estilo.css"> <!-- cria um link para outro arquivo
     Separando o css do HTML e JS -->
-      
+
 </head>
+
 <body>
     <header>
         <h1>Relatório CCB - Maringá e Região</h1>
@@ -15,13 +17,13 @@
 
         <button onclick="mostrarCultos()">Cultos</button>
         <button onclick="mostrarEnsaios()">Ensaios</button>
-    <!-- <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button> -->
+        <!-- <button onclick="window.open('https://congregacaocristanobrasil.org.br/', '_blank')">Site Oficial</button> -->
         <button onclick="mostrarServiços()">Serviços</button>
         <a href="musica.html"><button type="button">Área músical</button></a>
         <a href="#"><button type="button" class="disabled">Santa Ceia</button></a>
     </header>
 
-    <main> 
+    <main>
         <!--Lista de Cultos -->
         <div id="pagina-cultos" class="conteudo hidden">
             <h2>Agenda de Cultos</h2>
@@ -67,7 +69,7 @@
                 <li>Jardim Ouro Cola - Quinta e Sábado - 19:30</li>
                 <li>Jardim Monte Rei - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
                 <li>Zona 6 - Maringá Velho - Quinta e Sábado - 19:30 | Domingo - 18:30</li>
-            
+
                 <li>Loteamento Sumaré - Sexta - 19:30 | Domingo - 18:30</li>
             </ul>
         </div>
@@ -91,7 +93,7 @@
                 <li>1ª Sexta - Pulinópolis (MÇU)</li>
                 <li>1ª Sexta - Cafeara (JTÃ)</li>
                 <li>1ª Sexta - Jd. Pioneiro (PDU)</li>
-                            
+
                 <li>2ª Sexta - Jd. Catedral</li>
                 <li>2ª Sexta - Jd. Piatã</li>
                 <li>2ª Sexta - Jd. Ebenezer</li>
@@ -103,7 +105,7 @@
                 <li>2ª Sexta - Jaguapitã - Central</li>
                 <li>2ª Sexta - Conj. João de Barros (MVA)</li>
                 <li>2ª Sexta - Água Boa - Central</li>
-                            
+
                 <li>3ª Sexta - Conj. Guaiapó</li>
                 <li>3ª Sexta - Jd. Ouro Cola</li>
                 <li>3ª Sexta - Maringá Velho</li>
@@ -117,13 +119,13 @@
                 <li>3ª Sexta - Jd. São Rafael (MÇU)</li>
                 <li>3ª Sexta - São Miguel do Cambuí (MVA)</li>
                 <li>3ª Sexta - Aquidaban (MVA)</li>
-                            
+
                 <li>4ª Sexta - Conj. Requião</li>
                 <li>4ª Sexta - Conj. Giacomo Colombari (MVA)</li>
                 <li>4ª Sexta - Vale Azul (SDI)</li>
                 <li>4ª Sexta - Guaraci (JTÃ)</li>
                 <li>4ª Sexta - Floriano - Central</li>
-                            
+
                 <li>Última Sexta - Vila Morangueira</li>
                 <li>Última Sexta - Jd. Continental (Na igreja Pq. Hortência)</li>
                 <li>Última Sexta - Vila Santa Isabel</li>
@@ -131,9 +133,9 @@
                 <li>Última Sexta - Floresta - Central</li>
                 <li>Última Sexta - Ourizona - Central</li>
                 <li>Última Sexta - Prado Ferreira (JTÃ)</li>
-                            
+
                 <li>3ª Domingo - 16:00 - Pq. Avenida</li>
-                            
+
                 <li>2ª Segunda - Jd. Bertioga</li>
                 <li>2ª Segunda - Jardim Monte Rei</li>
                 <li>2ª Segunda - Jardim Vitória</li>
@@ -142,7 +144,7 @@
                 <li>2ª Segunda - Jardim Europa (MÇU)</li>
                 <li>2ª Segunda - Res. Monte Carmelo (PDU)</li>
                 <li>2ª Segunda - São Jorge do Ivai - Central</li>
-                            
+
                 <li>3ª Segunda - Jd. Verônica</li>
                 <li>3ª Segunda - Pq. Hortência 1ª Parte</li>
                 <li>3ª Segunda - Vila Santo Antônio</li>
@@ -153,14 +155,14 @@
                 <li>3ª Segunda - Jd. Panorama (SDI)</li>
                 <li>3ª Segunda - Cj. Res. Floresta (SDI)</li>
                 <li>3ª Segunda - Bentópolis (JTÃ)</li>
-                            
+
                 <li>4ª Segunda - Maringá - Central</li>
                 <li>4ª Segunda - Jd. Oriental (Antigo Diamante)</li>
                 <li>4ª Segunda - Jd. Alvorada</li>
                 <li>4ª Segunda - Iguatemi</li>
                 <li>4ª Segunda - Pq. Alvamar (SDI)</li>
                 <li>4ª Segunda - Jd. Bela Vista (PDU)</li>
-                            
+
                 <li>Última Segunda - Jd. Universo</li>
                 <li>Última Segunda - Pq. Das Laranjeiras</li>
                 <li>Última Segunda - Jd. Espanha</li>
@@ -185,24 +187,24 @@
             </div>
             <ul id="lista-serviços">
                 <h3 class="lista-vazia">Batismos</h3>
-                <h3 class="lista-vazia">Reuniões de Mocidade</h3>
+
+                <h3>Reuniões de Mocidade</h3>
+                <li>Reunião de Mocidade "ONLINE" - Transmissão pelo Brás - 31/05/26 no Domingo às 14:00h - Participação Individual</li>
+                <li>Reunião de Mocidade - Paiçandu – Central - 07/06/26 no Domingo às 14:00h - Ir. Elias Rodrigues Fermino</li>
+
                 <h3>Culto para Mocidade</h3>
-                <li>Culto para Mocidade - Mirasselva - 25/04/26 no Sábado às 19:00h - Ir. Laerte Tolentino</li>
-                <li>Culto para Mocidade - Marialva - Central - 25/04/26 no Sábado às 19:00h - Ir. Valter Luis Araújo</li>
-                <li>Culto para Mocidade - Itambé - 09/05/26 no Sábado às 19:00h - Ir. Marcos Moreira</li>
+                <li>Culto para Mocidade - Vila Santa Izabel - 30/05/26 no Sábado às 19:00h - Ir. Márcio Valério</li>
+                <li>Culto para Mocidade - Vila Morangueira - 30/05/26 no Sábado às 19:00h - Ir. Laerte Tolentino</li>
 
-                <h3>Reunião para Auxiliares de Recitativos</h3>
-                <li>Reunião para Auxiliares de Recitativos - Jardim Alvorada - 26/04/26 no Domingo às 09:00h - Ir. Eliseu Leles</li>
-
-                <h3>Teste e Exame de Música</h3>
-                <li>Teste e Exame para Músico e Organista (MSA/Teoria) - 1º PERÍODO - Sede Administrativa <br>(Salas: 5º e 6º andar) - 09/05/26 no Sábado às 09:00h - Irs. José Antônio dos Reis / Clóvis Maciel de Oliveira</li>
-                <li>Teste e Exame para Músico e Organista (INSTRUMENTO, MÉTODO E HINÁRIO) - 2º PERÍODOS - Sede Administrativa <br> (Salas: 3º, 5º e 6º andar) - 16/05/26 no Sábado às 09:00h - Irs. José Antônio dos Reis / Clóvis Maciel de Oliveira</li>
+                <!--<h3 class="lista-vazia">Teste e Exame de Música</h3> -->
 
                 <h3 class="lista-vazia">Ensaio Regional (Geral)</h3>
+
+
                 <!-- <h3 class="lista-vazia">Ensaio p/ Familia (Cordas)</h3>
                 <h3 class="lista-vazia">Ensaio p/ Familia (Madeiras)</h3>
                 <h3 class="lista-vazia">Ensaio p/ Familia (Metais)</h3> -->
-                
+
 
             </ul>
         </div>
@@ -213,10 +215,10 @@
         <p>Nota: Este não é um site oficial da Congregação Cristã no Brasil.</p>
         <p>© 2025 - Feito por Vitor Huçulak</p>
     </footer>
-    
+
 
     <script src="script.js"> </script>
-    
-</body>
-</html>
 
+</body>
+
+</html>
