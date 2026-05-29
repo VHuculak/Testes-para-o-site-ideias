@@ -289,3 +289,34 @@ li {
   text-align: left;
   padding: 12px;
 }
+
+
+/* ====== MODAL ====== */
+
+#modal-overlay {
+     background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000; 
+}
+
+#modal-caixa {
+    background: white;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal-fechar {
+    display: block;
+    margin-left: auto;
+}
